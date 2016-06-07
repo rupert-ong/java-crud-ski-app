@@ -4,6 +4,8 @@
 
 This strictly educational, proof of concept side project can be found in the Learning Java Web Development course at [O'Reilly](http://shop.oreilly.com/product/0636920048831.do), under "Web Apps And Databases Using JSP And POJOs". A "greedy" pagination solution was also independently implemented, for proof of concept only.
 
+Be sure to check the other branches in this repo to view alernate solutions using JSTL, HttpServlet(s) and dealing with 2 database tables (explicit commits).
+
 ## Table of contents
 
 * [Quick start](#quick-start)
