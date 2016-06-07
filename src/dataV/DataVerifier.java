@@ -201,15 +201,18 @@ public class DataVerifier extends HttpServlet {
 		try {
 			// Better way of checking if entry exists in table...
 			Statement stmt = conn.createStatement();
-			String sql = "SELECT product FROM skisEtc";
+			String sql = "SELECT product FROM skisEtc WHERE UPPER(product) = UPPER('"+name+"');";
 			ResultSet rs = stmt.executeQuery(sql);
-			while(rs.next()){
+			if(rs.isBeforeFirst()) {    // Records exists because cursor is before first row
+				flag = true;
+			}
+			/*while(rs.next()){
 				String product = rs.getString("product");
 				if(product.equalsIgnoreCase(name)) {
 					flag = true;
 					break;
 				}
-			}
+			}*/
 			rs.close();
 			stmt.close();
 		} catch (SQLException e) {} 

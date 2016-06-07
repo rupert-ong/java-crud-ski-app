@@ -1,19 +1,40 @@
-<?xml version = "1.0" encoding = "UTF-8"?>
+<?xml version="1.0" encoding="iso-8859-1"?>
 <web-app >
   <welcome-file-list>    
     <welcome-file>skiStuff.jsp</welcome-file>
   </welcome-file-list>
+
   <error-page>
   	<exception-type>java.lang.Throwable</exception-type>
   	<location>/error.jsp</location>
   </error-page>
-  <!-- Servlets -->
+
   <servlet>
-  	<servlet-name>dvServlet</servlet-name>
-  	<servlet-class>dataV.DataVerifier</servlet-class>
+    <servlet-name>employeeFinderServlet</servlet-name>
+    <servlet-class>transactS.EmpFinder</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>dvServlet</servlet-name>
-  	<url-pattern>/dataVerifier</url-pattern>
+    <servlet-name>employeeFinderServlet</servlet-name>
+    <url-pattern>/findEmpS</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>employeeDataVerifierServlet</servlet-name>
+    <servlet-class>transactS.DataVerifierT</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>employeeDataVerifierServlet</servlet-name>
+    <url-pattern>/verifyAndSave</url-pattern>
+  </servlet-mapping> 
+
+  <servlet>
+    <servlet-name>productDataVerifierServlet</servlet-name>
+    <servlet-class>dataV.DataVerifier</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>productDataVerifierServlet</servlet-name>
+    <url-pattern>/dataVerifier</url-pattern>
+  </servlet-mapping> 
+
+
 </web-app>
