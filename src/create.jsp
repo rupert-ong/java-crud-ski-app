@@ -16,11 +16,11 @@
 				<form action="dataVerifier" method="post">
 					<div class="form-group">
 						<label for="product">Product</label>
-						<input type="text" name="product" id="product" class="form-control" required>
+						<input type="text" name="product" id="product" class="form-control" minlength="8" required>
 					</div>
 					<div class="form-group">
 						<label for="category">Category</label>
-						<input type="text" name="category" id="category" class="form-control" required>
+						<input type="text" name="category" id="category" class="form-control" minlength="8" required>
 					</div>
 					<div class="form-group">
 						<label for="price">Price</label>
