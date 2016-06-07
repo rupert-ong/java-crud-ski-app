@@ -1,0 +1,3 @@
+*.war
+/notes.txt
+build/
