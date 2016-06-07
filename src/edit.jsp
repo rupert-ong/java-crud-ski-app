@@ -18,7 +18,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<h1>Edit Product</h1>
-				<form action="${pageContext.request.contextPath}/saveEdits.jsp" method="post">
+				<form action="dataVerifier" method="post">
 					<div class="form-group">
 						<label for="id">Id</label>
 						<input type="text" name="id" value="${param.id}" id="id" class="form-control" readonly>

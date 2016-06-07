@@ -13,18 +13,18 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<h1>Create Product</h1>
-				<form action="${pageContext.request.contextPath}/save.jsp" method="post">
+				<form action="dataVerifier" method="post">
 					<div class="form-group">
 						<label for="product">Product</label>
-						<input type="text" name="product" id="product" class="form-control">
+						<input type="text" name="product" id="product" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="category">Category</label>
-						<input type="text" name="category" id="category" class="form-control">
+						<input type="text" name="category" id="category" class="form-control" required>
 					</div>
 					<div class="form-group">
 						<label for="price">Price</label>
-						<input type="number" name="price" id="price" class="form-control" step="0.01" min="0">
+						<input type="number" name="price" id="price" class="form-control" step="0.01" min="0" required>
 					</div>
 					<ul class="list-inline">
 						<li><input type="submit" class="btn btn-primary" value="Create Product"></li>
